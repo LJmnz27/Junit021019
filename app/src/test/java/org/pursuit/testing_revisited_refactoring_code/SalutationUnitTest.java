@@ -51,20 +51,6 @@ public class SalutationUnitTest {
         Assert.assertNotNull(firstLastName[firstLastName.length - 1]);
     }
 
-    @Test (expected = ArrayIndexOutOfBoundsException.class)
-    public void check_first_name_for_null_values() {
-        String[] splitName = new String[]{null, "Burgundy"};
-        String firstName = splitName[0];
-        Assert.assertNotNull(firstName);
-    }
-
-    @Test (expected = ArrayIndexOutOfBoundsException.class)
-    public void check_last_name_for_null_values() {
-        String[] splitName = new String[]{"Ron", null};
-        String lastName = splitName[splitName.length - 1];
-        Assert.assertNotNull(lastName);
-    }
-
     @After
     public void tearDown() throws Exception {
         salutation = null;

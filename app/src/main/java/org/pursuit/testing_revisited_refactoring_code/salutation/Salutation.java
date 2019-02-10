@@ -30,7 +30,6 @@ public class Salutation implements SalutationInterface {
 
     @Override
     public String fullName(@NonNull String name) {
-        name="";
 
         return name;
     }
@@ -55,9 +54,10 @@ public class Salutation implements SalutationInterface {
             }
         }
 
-        last = name.substring(temp, name.length());
+        last = name.substring(temp + 1, name.length());
 
-        return new String[0];
+
+        return new String[]{first ,last};
     }
 
     /**
